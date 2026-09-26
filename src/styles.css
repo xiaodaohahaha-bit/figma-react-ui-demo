@@ -1,0 +1,33 @@
+*{box-sizing:border-box}
+html,body,#root{margin:0;min-width:375px;min-height:100%;background:#e9ebef}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.preview{min-height:100vh;display:flex;align-items:flex-start;justify-content:center}
+.preview figure{position:relative;width:375px;height:812px;flex:none;margin:0;overflow:hidden;background:#fff}
+.preview figure img{display:block;width:375px;height:812px;max-width:none}
+.prototype-hotspot{position:absolute;z-index:1;margin:0;padding:0;border:0;background:transparent;cursor:pointer}
+.prototype-hotspot:focus-visible{outline:2px solid #1769ff;outline-offset:3px}
+.progress-cover{position:absolute;z-index:3;left:25px;top:201px;width:326px;height:8px;background:#fff;pointer-events:none}
+.progress-track{position:absolute;left:1px;top:2px;width:324px;height:4px;border-radius:143px;background:#f4f4f4}
+.live-progress{position:absolute;left:1px;top:2px;height:4px;border-radius:143px;background:linear-gradient(90deg,#ffcb95,#ffb1bd)}
+.progress-node{position:absolute;z-index:4;top:202px;width:11.047px!important;height:6.312px!important;max-width:none;pointer-events:none}
+.thinking-spinner{position:absolute;z-index:3;left:23px;top:177.5px;width:23px;height:23px;border-radius:50%;background:#fff;pointer-events:none}
+.thinking-spinner img{display:block;width:23px;height:23px;animation:thinking-spin 1.4s linear infinite}
+.gray-node-mask{position:absolute;z-index:3;left:25px;top:537.5px;width:19px;height:19px;background:#fff;overflow:hidden;pointer-events:none}
+.rotating-gray-node{display:block;width:18px!important;height:18px!important;max-width:none}
+.loading-node{position:absolute;z-index:3;overflow:hidden;background:#fff;pointer-events:none}
+.loading-gray,.loading-color{position:absolute;inset:0;overflow:hidden}
+.loading-gray{filter:grayscale(1);opacity:.72}
+.loading-color{opacity:0}
+.loading-node.lit .loading-color{opacity:1}
+.loading-node.lit .loading-gray{opacity:0}
+.loading-gray img,.loading-color img{position:absolute;width:375px!important;height:812px!important;max-width:none}
+@keyframes thinking-spin{to{transform:rotate(360deg)}}
+.carousel-window{position:absolute;z-index:1;left:16px;top:458px;width:343px;height:134px;overflow:hidden;touch-action:pan-y;cursor:grab;background:#fff}
+.carousel-window:active{cursor:grabbing}
+.carousel-track{display:flex;gap:12px;width:max-content;height:134px;transition:transform .25s ease-out;will-change:transform}
+.carousel-slide{width:292px;height:134px;flex:none}
+.carousel-slide img{display:block;width:292px;height:134px;object-fit:fill;max-width:none}
+@media(prefers-reduced-motion:reduce){.carousel-track{transition:none}.thinking-spinner img{animation-duration:4s}}
+@media(max-width:700px){
+  html,body,#root{background:#fff}
+}

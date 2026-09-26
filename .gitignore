@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.npm-cache/
+work/
+outputs/
+public/figma/test.svg
+*.log
+.DS_Store
