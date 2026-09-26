@@ -6,14 +6,14 @@ type FrameId='8:206'|'13:379'|'8:377'|'9:4'|'14:867'|'16:1283';
 type Frame={id:FrameId;name:string;src:string};
 
 const frames:Frame[]=[
-  {id:'8:206',name:'第一步弹窗',src:'./figma/frame-8-206.svg'},
-  {id:'13:379',name:'弹窗进一步点击',src:'./figma/frame-13-379.svg'},
-  {id:'8:377',name:'弹窗进一步展开',src:'./figma/frame-8-377.svg'},
-  {id:'9:4',name:'节点进一步加载',src:'./figma/frame-9-4.svg'},
-  {id:'14:867',name:'生成结果',src:'./figma/frame-14-867.svg'},
-  {id:'16:1283',name:'结果进一步展示',src:'./figma/frame-16-1283.svg'},
+  {id:'8:206',name:'第一步弹窗',src:'./figma/frame-8-206.webp'},
+  {id:'13:379',name:'弹窗进一步点击',src:'./figma/frame-13-379.webp'},
+  {id:'8:377',name:'弹窗进一步展开',src:'./figma/frame-8-377.webp'},
+  {id:'9:4',name:'节点进一步加载',src:'./figma/frame-9-4.webp'},
+  {id:'14:867',name:'生成结果',src:'./figma/frame-14-867.avif'},
+  {id:'16:1283',name:'结果进一步展示',src:'./figma/frame-16-1283.avif'},
 ];
-const carouselImages=['./carousel/group-318.png','./carousel/group-49.png','./carousel/group-319.png'];
+const carouselImages=['./carousel/group-318.webp','./carousel/group-49.webp','./carousel/group-319.webp'];
 const progressRanges:Partial<Record<FrameId,[number,number]>>={
   '8:206':[.22,.48],
   '13:379':[.46,.64],
@@ -102,8 +102,8 @@ function App(){
           <img className="progress-node" src="./figma/progress-node.svg" alt="" draggable={false} style={{left:26+324*progress-5.5}}/>
           {frameId==='8:377'&&<div className="gray-node-mask"><img className="rotating-gray-node" src="./figma/gray-node-rectangle285.svg" alt="" draggable={false}/></div>}
           {frameId==='9:4'&&loadingNodes.map((slot,index)=><div className={`loading-node ${progress>=slot.at?'lit':''}`} key={index} style={{left:slot.left,top:slot.top,width:slot.width,height:slot.height}}>
-            <span className="loading-gray"><img src="./figma/frame-9-4.svg" alt="" draggable={false} style={{left:-slot.left,top:-slot.top}}/></span>
-            <span className="loading-color"><img src="./figma/frame-9-4.svg" alt="" draggable={false} style={{left:-slot.left,top:-slot.top}}/></span>
+            <span className="loading-gray"><img src="./figma/frame-9-4.webp" alt="" draggable={false} style={{left:-slot.left,top:-slot.top}}/></span>
+            <span className="loading-color"><img src="./figma/frame-9-4.webp" alt="" draggable={false} style={{left:-slot.left,top:-slot.top}}/></span>
           </div>)}
         </>}
         {isResult&&(
